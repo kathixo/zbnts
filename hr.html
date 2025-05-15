@@ -33,7 +33,7 @@
     }
   </style>
   
-  <!-- Navigation Bar -->
+ <!-- Navigation Bar -->
   <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-md transition-all">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       
@@ -47,29 +47,34 @@
       <nav class="space-x-6 text-lg hidden md:flex items-center">
         <a href="home.html" class="hover:underline underline-offset-4 decoration-blue-400 hover:text-blue-800 dark:text-blue">Home</a>
         
+        <a href="home.html#about" class="hover:underline underline-offset-4 decoration-blue-400 hover:text-blue-800 dark:text-white">About</a>
         <!-- Services Dropdown -->
-        <div class="relative group">
-          <button class="hover:underline underline-offset-4 decoration-blue-400 hover:text-blue-800 inline-flex items-center dark:text-white">
-            Services
-            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="absolute left-0 mt-2 w-60 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg hidden group-hover:block z-50">
-            <a href="tax.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Taxation Services</a>
-            <a href="hr.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Human Resources</a>
-            <a href="bus.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Business Management</a>
-            <a href="payroll.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Payroll Services</a>
-            <a href="acc_ser.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Accounting Services</a>
-            <a href="com_sec.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Company Secretarial</a>
-          </div>
-        </div>
+<div class="relative">
+  <button onclick="toggleDropdown()" id="servicesBtn" class="hover:underline underline-offset-4 decoration-blue-400 hover:text-blue-800 inline-flex items-center dark:text-white">
+    Services
+    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  
+  <div id="servicesDropdown" class="absolute left-0 mt-2 w-60 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg hidden z-50">
+    <a href="tax.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Taxation Services</a>
+    <a href="hr.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Human Resources</a>
+    <a href="bus.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Business Management</a>
+    <a href="payroll.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Payroll Services</a>
+    <a href="acc_ser.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Accounting Services</a>
+    <a href="com_sec.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-800 hover:underline underline-offset-4 decoration-blue-400">Company Secretarial</a>
+  </div>
+</div>
+  
+        <a href="home.html#faq" class="hover:underline underline-offset-4 decoration-blue-400 hover:text-blue-800 dark:text-white">FAQ</a>
+        <a href="home.html#contact" class="hover:underline underline-offset-4 decoration-blue-400 hover:text-blue-800 dark:text-white">Contact</a>
         
       </nav>
   
       <!-- Theme Toggle & Consultation Button -->
       <div class="flex items-center gap-4">
-        <a href="#contact" class="bg-blue-300 hover:bg-blue-600 text-black px-4 py-2 rounded-full text-sm font-medium">Consultation</a>
+        <a href="home.html#contact" class="bg-blue-300 hover:bg-blue-600 text-black px-4 py-2 rounded-full text-sm font-medium">Consultation</a>
       </div>
     </div>
   </header>
@@ -89,19 +94,19 @@
   
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800 dark:text-gray-200">
           <li class="flex items-start gap-3">
-            <span class="text-green-500 text-xl">✔</span> People management
+             <span class="text-blue-500 text-xl">✔</span> People management
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-500 text-xl">✔</span> Resourcing and talent planning
+             <span class="text-blue-500 text-xl">✔</span> Resourcing and talent planning
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-500 text-xl">✔</span> Learning and development
+             <span class="text-blue-500 text-xl">✔</span> Learning and development
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-500 text-xl">✔</span> Employee relations
+             <span class="text-blue-500 text-xl">✔</span> Employee relations
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-500 text-xl">✔</span> Recruitment and Placement
+             <span class="text-blue-500 text-xl">✔</span> Recruitment and Placement
           </li>
         </ul>
       </div>
@@ -321,6 +326,25 @@ nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % 3;
   updateSlider();
 });
+</script>
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById("servicesDropdown");
+    dropdown.classList.toggle("hidden");
+  }
+
+  // Close dropdown if clicking outside
+  window.addEventListener("click", function (e) {
+    const dropdown = document.getElementById("servicesDropdown");
+    const button = document.getElementById("servicesBtn");
+
+    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+      dropdown.classList.add("hidden");
+    }
+  });
+  document.getElementById("servicesDropdown").addEventListener("mouseenter", () => {
+    document.getElementById("servicesDropdown").classList.remove("hidden");
+    });
 </script>
 <!-- Service Modal Template -->
 <div id="serviceModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
